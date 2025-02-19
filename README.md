@@ -36,3 +36,6 @@ DDPG is used to train the agent, which consists of:
 *Step 5.* The training ends after the reward within an episode reaches a user-set value.
 
 ## 4. Remarks
+
+Since the final goal is to stabilize the pendulum, the bonus for being near the target state can be added in the reward to enhance the desired final state.  
+For example, add a bonus value when the absolute theta is smaller than 0.1.
