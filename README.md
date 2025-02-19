@@ -16,10 +16,10 @@ The reward function is designed to encourage stability in the upright position w
 ![image](https://github.com/user-attachments/assets/d71090a3-f0f9-4e2b-8f24-9ee150a11d00)
 
 
-Notations: 
-theta is the pendulum's deviation from the upright position.  
-dtheta is the angular velocity.  
-u is the control torque applied.
+Notations:  
+$\theta$ is the pendulum's deviation from the upright position.  
+$\dot{\theta}$ is the angular velocity.  
+$u$ is the control torque applied.
 
 ## 3. Deep Deterministic Policy Gradient (DDPG)
 
@@ -35,7 +35,11 @@ DDPG is used to train the agent, which consists of:
 *Step 4.* Update the Critic Network.
 *Step 5.* The training ends after the reward within an episode reaches a user-set value.
 
+![image](https://github.com/user-attachments/assets/240a6a61-0ccf-4da2-a8f2-ee8af5a62d4e)
+
+
 ## 4. Remarks
 
 Since the final goal is to stabilize the pendulum, the bonus for being near the target state can be added in the reward to enhance the desired final state.  
-For example, add a bonus value when the absolute theta is smaller than 0.1.
+For example, add a bonus value when $|\theta| \leq 0.1$ and $|\dot{\theta}| \leq 0.1$
+
