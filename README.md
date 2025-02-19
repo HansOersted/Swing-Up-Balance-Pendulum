@@ -11,6 +11,16 @@ Note that this setting is to align the real case in the environment, where the s
 
 ## 2. The rewards
 
+The reward function is designed to encourage stability in the upright position while minimizing oscillations and excessive control effort:
+
+![image](https://github.com/user-attachments/assets/d71090a3-f0f9-4e2b-8f24-9ee150a11d00)
+
+
+Notations: 
+theta is the pendulum's deviation from the upright position.  
+dtheta is the angular velocity.  
+u is the control torque applied.
+
 ## 3. DDPG
 
 ## 4. Remarks
