@@ -21,6 +21,18 @@ theta is the pendulum's deviation from the upright position.
 dtheta is the angular velocity.  
 u is the control torque applied.
 
-## 3. DDPG
+## 3. Deep Deterministic Policy Gradient (DDPG)
+
+DDPG is used to train the agent, which consists of:
+
+- **Actor Network**: A neural network that takes in observations and outputs continuous actions.
+- **Critic Network**: A neural network that estimates the Q-value of a given `(state, action)` pair.
+
+***The entire updating mechanism is summarized below:***  
+*Step 1.* Take an action based on the Actor.  
+*Step 2.* Record the state and update the reward and Q value.  
+*Step 3.* Update the Actor Network.  
+*Step 4.* Update the Critic Network.
+*Step 5.* The training ends after the reward within an episode reaches a user-set value.
 
 ## 4. Remarks
